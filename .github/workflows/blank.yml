@@ -1,8 +1,16 @@
-name: CI
-on: push
+name: test CI
+
+on:
+  push:
+    branches: 
+    - master
+  workflow_dispatch:
+env:
+  app: test
 jobs:
-  prod-check:
-    if: ${{ github.ref == 'refs/heads/main' }}
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - run: echo "Deploying to production server on branch $GITHUB_REF"
+      - name: echo test
+        run: echo ${GITHUB_REF}
