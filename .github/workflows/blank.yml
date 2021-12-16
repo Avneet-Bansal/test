@@ -13,4 +13,4 @@ jobs:
 
     steps:
       - name: echo test
-        run: echo "${{ github.ref_name }}  and githubRef: ${GITHUB_REF}"
+        run: echo "GITHUB_REF: ${GITHUB_REF}"
