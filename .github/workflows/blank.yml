@@ -10,7 +10,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: echo test
-        run: echo "Branch : ${GITHUB_REF}"
+        run: echo branch name= ${GITHUB_REF_NAME}
